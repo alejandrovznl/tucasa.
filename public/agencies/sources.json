@@ -1,0 +1,38 @@
+[
+  {
+    "agency": "Century 21",
+    "source_page": "https://c21.com.bo/",
+    "image_url": "https://c21.com.bo/img/c21mx/logos/logo-seal-2.svg",
+    "notes": "Original gold C21 seal with stylized 21 inside C. Visually inspected through PNG rendering. Alternative Bolivia wordmark: century21-bolivia-wordmark.svg."
+  },
+  {
+    "agency": "RE/MAX",
+    "source_page": "https://resources.remax.com/faq-items/new-remax-branding-assets/",
+    "image_url": "https://res.cloudinary.com/remax-prod/raw/upload/v1761012464/us-resources-prod/New-Branding-Logo-SVG-_48915aa336.zip?_i=AA",
+    "notes": "Official current balloon mark, no lettering. SVG original extracted unchanged. Alternative PNG remax-balloon-mark.png has white outline."
+  },
+  {
+    "agency": "Keller Williams Bolivia",
+    "source_page": "https://bolivia.kw.com/es-es/",
+    "image_url": "https://bolivia.kw.com/es-es/",
+    "notes": "Exact existing white KW vector symbol extracted from official HTML and wrapped as standalone SVG; path, fill and viewBox preserved. Put on a red pin background. Alternative downloaded original red favicon kw-favicon.png (180x180); Bolivia full wordmark kw-bolivia-logo.png (900x312)."
+  },
+  {
+    "agency": "Tu Balcón Bolivia",
+    "source_page": "https://tubalcon.com.bo/",
+    "image_url": "https://tubalcon.com.bo/wp-content/uploads/TU-BALCON-ISOLOGOv1.png",
+    "notes": "Original green stylized b with balcony symbol. Usable on a white pin. Avoid downloaded 300x300 favicon derivative tubalcon-mark.png: its transparent pixels are encoded differently and visual contrast is poor. Alternative transparent white full logo tubalcon-wordmark-white.png (249x170), used in official header."
+  },
+  {
+    "agency": "Bien Inmuebles Bolivia",
+    "source_page": "https://www.bieninmuebles.com.bo/",
+    "image_url": "https://bieninmuebles.com.bo/public/assets/img/favicon.png",
+    "notes": "Original official house mark, grey house with turquoise Bien Inmuebles lettering. Full white wordmark alternative bieninmuebles-logo.png (500x210)."
+  },
+  {
+    "agency": "Vintage Real Estate Bolivia",
+    "source_page": "https://www.facebook.com/Vintagerealestatebolivia/",
+    "image_url": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-1/697414524_971770832263563_6266498390678692232_n.jpg?stp=dst-jpg_tt6&cstp=mx1755x1755&ctp=s720x720&_nc_cat=105&ccb=1-7&_nc_sid=3ab345&_nc_ohc=QAqsZapYV8YQ7kNvwFei4Ba&_nc_oc=Adqn2zcE1N6IvIHhfLyw5qVzfRAqvgNRtz6m8_DvUeOjSxiGUfFUG-ps6Myau5vSz9r8yU3GfYtZPwIijYfYfVWJ&_nc_zt=24&_nc_ht=scontent-lga3-2.xx&_nc_gid=EyhCP6osddQrM5qwGKcx9w&_nc_ss=7f20f&oh=00_AQOKb764ObUPGu5aczLBFBB-ZTzWAqAoDqU99bF_D2sYJA&oe=6ACCC60B",
+    "notes": "Official Facebook profile OG image downloaded original JPG; orange circular Vintage Real Estate Bolivia symbol on black. Official agency identity corroborated by https://www.instagram.com/vintagerealestatebolivia/."
+  }
+]
