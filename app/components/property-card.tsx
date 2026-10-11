@@ -1,0 +1,11 @@
+'use client';
+import { Heart, BedDouble, Bath, Ruler, MapPin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { AGENCIES, OPERATIONS, money, sourceLabel, type Property } from '@/lib/tucasa';
+import PropertyImage from './property-image';
+import AgencyLogo from './agency-logo';
+export function SourceBadge({source}:{source:string}){const a=AGENCIES.find(a=>a.id===source);return <span className="source-badge">{a?<AgencyLogo agency={a} size={17}/>:<span className="source-dot" style={{background:'#6C7C8E'}}/>}{sourceLabel(source)}</span>;}
+export function PropertyFacts({property:p}:{property:Property}){return <div className="property-facts">{p.bedrooms!==null&&<span><BedDouble size={16}/>{p.bedrooms===0?'Integrado':`${p.bedrooms} dorm.`}</span>}{p.bathrooms!==null&&<span><Bath size={16}/>{p.bathrooms} baños</span>}<span><Ruler size={16}/>{p.area.toLocaleString('es-BO')} m²</span></div>;}
+export default function PropertyCard({property:p,saved,onFavorite,onOpen,compact=false}:{property:Property;saved:boolean;onFavorite:(p:Property)=>void;onOpen:(p:Property)=>void;compact?:boolean}){
+return <article className={`property-card ${compact?'compact':''}`}><div className="property-photo"><button className="photo-open" onClick={()=>onOpen(p)} aria-label={`Ver ${p.title}`}><PropertyImage property={p}/></button><span className="operation-badge">{OPERATIONS[p.operation]}</span><Button variant="ghost" size="icon" className={`favorite-button ${saved?'saved':''}`} onClick={()=>onFavorite(p)} aria-label={saved?'Quitar de favoritos':'Guardar en favoritos'} aria-pressed={saved}><Heart size={18} fill={saved?'currentColor':'none'}/></Button></div><div className="property-card-body"><SourceBadge source={p.source}/><div className="property-price">{money(p.price,p.currency)}{p.operation==='alquiler'&&<small>/ mes</small>}</div><button className="property-title" onClick={()=>onOpen(p)}>{p.title}</button><p className="property-location"><MapPin size={14}/>{p.zone}, {p.municipality}</p><PropertyFacts property={p}/>{!p.confirmed&&<p className="unconfirmed-label">Ubicación sin confirmar</p>}<Button variant="ghost" className="detail-link" onClick={()=>onOpen(p)}>Ver inmueble</Button></div></article>;
+}
