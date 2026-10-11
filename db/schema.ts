@@ -1,0 +1,5 @@
+import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
+export const profiles = sqliteTable('profiles', { userId: text('user_id').primaryKey(), data: text('data').notNull() });
+export const favorites = sqliteTable('favorites', { id: text('id').primaryKey(), userId: text('user_id').notNull(), propertyId: text('property_id').notNull(), data: text('data').notNull(), createdAt: text('created_at').notNull() }, table => [index('idx_favorites_user_created').on(table.userId,table.createdAt)]);
+export const searches = sqliteTable('searches', { id: text('id').primaryKey(), userId: text('user_id').notNull(), data: text('data').notNull(), count: integer('count').notNull(), createdAt: text('created_at').notNull() }, table => [index('idx_searches_user_created').on(table.userId,table.createdAt)]);
+export const support = sqliteTable('support', { id: text('id').primaryKey(), userId: text('user_id').notNull(), message: text('message').notNull(), createdAt: text('created_at').notNull() });
