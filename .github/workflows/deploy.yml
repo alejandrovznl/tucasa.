@@ -27,7 +27,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build and Deploy Next.js via OpenNext
-        run: npx -y @opennextjs/cloudflare build && npx wrangler pages deploy .worker-next/assets --project-name tucasa
+        run: pnpm opennextjs-cloudflare build && npx wrangler pages deploy .worker-next/assets --project-name tucasa
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
